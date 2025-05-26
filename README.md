@@ -1,14 +1,21 @@
 # Voxel Engine
 
-A cross-platform voxel engine written in C++17 using OpenGL, GLFW, GLAD, GLM, and stb_image.
+A basic cross-platform voxel engine using OpenGL.
+
+---
+## Engine Features
+
+- Camera movement
+- Block face culling
+- Static 20 x 20 chunks world (procedural world generation will be added later)
 
 ---
 
-## Features
+## Technical Features
 
-- Modern OpenGL rendering
+- Basic OpenGL rendering
 - Cross-platform (Windows, Linux, macOS)
-- Portable CMake-based build system
+- Portable CMake build system
 - All dependencies included as submodules or source
 
 ---
@@ -27,7 +34,7 @@ This project uses git submodules for dependencies (GLFW, GLM).
 **Clone with submodules:**
 
 ```sh
-git clone --recursive https://github.com/yourusername/voxel-engine.git
+git clone --recursive https://github.com/hassan-a02/voxel-engine.git
 ```
 
 If you already cloned without `--recursive`, run:
@@ -39,6 +46,8 @@ git submodule update --init --recursive
 ---
 
 ## Building the Project
+
+Inside the project directory in CL:
 
 ```sh
 mkdir build
@@ -52,7 +61,6 @@ cmake --build .
 ## Running
 
 - The executable will be in `build/Debug` or `build/Release` (Windows) or `build/` (Linux/macOS).
-- If you use the dynamic version of GLFW, ensure the correct `glfw3.dll` is in your PATH or next to the executable (Windows only).
 
 ---
 
@@ -60,14 +68,16 @@ cmake --build .
 
 ```
 Voxel Engine/
+├─ README.md
 ├─ CMakeLists.txt
 ├─ src/
 ├─ include/
+├─ textures/
+├─ shaders/
 ├─ lib/
 │   ├─ glad/
 │   ├─ glfw/   # Submodule
-│   └─ glm/    # Submodule
-└─ ...
+│   └─ glm/
 ```
 
 ---
@@ -75,8 +85,8 @@ Voxel Engine/
 ## Notes
 
 - **GLAD:** Generated for OpenGL version 3.3 Core Profile.
-- **GLFW/GLM:** Built from source automatically via CMake.
-- **stb_image:** Included as source/header.
+- **GLFW:** Built from source automatically via CMake.
+- **GLM / stb_image:** Included as source/header.
 
 ---
 
