@@ -3,6 +3,7 @@
 #include "Block.h"
 #include <vector>
 #include <random>
+#include <memory>
 
 struct ChunkCoord
 {

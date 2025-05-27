@@ -13,6 +13,7 @@
 #include "Chunk.h"
 
 #include <vector>
+#include <memory>
 
 static std::map<BlockType, GLuint> textures;
 
