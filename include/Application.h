@@ -30,8 +30,6 @@ public:
 private:
 	GLFWwindow* window;
 	Renderer renderer;
-
-	static void windowResize(GLFWwindow* window, int x, int y);
 	
 
 

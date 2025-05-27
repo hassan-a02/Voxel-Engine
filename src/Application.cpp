@@ -52,7 +52,11 @@ void Application::run()
 void Application::init()
 {
    if (!glfwInit())
-       std::cout << "glfw init failed" << "\n";
+   {
+		std::cout << "glfw init failed" << "\n";
+		std::exit(EXIT_FAILURE);
+   }
+       
 
    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -61,16 +65,21 @@ void Application::init()
    window = glfwCreateWindow(1920, 1080, "Cube", nullptr, nullptr);
 
    if (window == nullptr)
-	   std::cout << "window init failed" << "\n";
+   {
+		std::cout << "window init failed" << "\n";
+		std::exit(EXIT_FAILURE);
+   }
+	   
 
-   glfwSetFramebufferSizeCallback(window, windowResize);
+   glfwSetFramebufferSizeCallback(window, windowResizeCallback);
 
    glfwMakeContextCurrent(window);
 
    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	   std::cout << "glad init failed" << "\n";
-
-   
+   {
+		std::cout << "glad init failed" << "\n";
+		std::exit(EXIT_FAILURE);
+   }
 
    renderer.init(window);
 }
@@ -86,7 +95,3 @@ void Application::cleanup()
 	glfwTerminate();
 }
 
-void Application::windowResize(GLFWwindow* window, int x, int y)
-{
-	glViewport(0, 0, x, y);
-}
