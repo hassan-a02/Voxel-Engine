@@ -4,6 +4,7 @@
 #include <vector>
 #include <random>
 #include <memory>
+#include <ctime>
 
 struct ChunkCoord
 {
