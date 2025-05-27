@@ -1,5 +1,5 @@
 #include "Renderer.h"
-#include <memor
+#include <memory>
 
 Renderer::Renderer() : camera()
 {
