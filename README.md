@@ -1,6 +1,6 @@
 # Voxel Engine
 
-A basic cross-platform voxel engine using OpenGL.
+A basic voxel engine using OpenGL. (DOES NOT RUN CORRECTLY ON LINUX, NOT TESTED ON MACOS)
 
 ---
 ## Engine Features
@@ -14,7 +14,6 @@ A basic cross-platform voxel engine using OpenGL.
 ## Technical Features
 
 - Basic OpenGL rendering
-- Cross-platform (Windows, Linux, macOS)
 - Portable CMake build system
 - All dependencies included as submodules or source
 
